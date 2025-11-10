@@ -1,0 +1,111 @@
+
+# Guion para Presentación de Proyecto: App "Películas"
+
+---
+
+## Diapositiva 1: Título
+
+*   **Título:** App de Películas
+*   **Subtítulo:** Una aplicación móvil para explorar el mundo del cine.
+*   **Autor(es):** [Tu Nombre/Nombre del Equipo]
+*   **Fecha:** Noviembre 2025
+
+---
+
+## Diapositiva 2: Introducción y Objetivo
+
+*   **¿Qué es "Películas"?**
+    *   Es una aplicación móvil, multiplataforma, diseñada para que los aficionados al cine puedan descubrir, buscar y guardar sus películas favoritas.
+*   **Objetivo del Proyecto:**
+    *   Crear una experiencia de usuario fluida y atractiva para la exploración de un gran catálogo de películas.
+    *   Ofrecer funcionalidades clave como visualización de estrenos, búsqueda avanzada y una lista personal de favoritos.
+    *   Construir una aplicación robusta y escalable utilizando tecnologías web modernas.
+
+---
+
+## Diapositiva 3: Tecnologías Utilizadas
+
+*   **Framework Principal:** Ionic + Angular
+    *   Se eligió Ionic por su capacidad para crear aplicaciones multiplataforma (iOS, Android, Web) desde una única base de código.
+    *   Angular proporciona una estructura sólida (MVVM), un potente sistema de componentes y enlace de datos.
+*   **Capacitor:**
+    *   Utilizado como puente para acceder a funcionalidades nativas del dispositivo, como el almacenamiento local seguro.
+*   **Lenguaje:** TypeScript
+    *   Aporta tipado estático a JavaScript, mejorando la calidad del código y reduciendo errores.
+*   **Fuente de Datos (API):** The Movie Database (TMDB)
+    *   Provee acceso a un extenso catálogo de películas, carátulas, repartos, géneros y más.
+*   **Almacenamiento Local:** Ionic Storage
+    *   Permite guardar las películas favoritas del usuario de forma persistente en el dispositivo.
+
+---
+
+## Diapositiva 4: Arquitectura y Estructura
+
+*   **Estructura de Navegación:**
+    *   La aplicación se organiza en una interfaz de 3 pestañas para un acceso rápido a las secciones principales.
+*   **Componentes Reutilizables:**
+    *   Se crearon componentes especializados para `slideshows` (vista de póster, backdrop y pares), permitiendo reutilizar la lógica de visualización en diferentes pantallas.
+    *   Un componente `detalle` que se presenta como un modal para mostrar la información de cualquier película.
+*   **Servicios:**
+    *   `MoviesService`: Centraliza toda la comunicación con la API de TMDB. Gestiona la obtención de películas populares, estrenos, búsquedas y detalles.
+    *   `DataLocalService`: Encapsula la lógica para guardar y recuperar las películas favoritas del almacenamiento del dispositivo.
+*   **Pipes:**
+    *   Se utilizan pipes personalizados (`imagen-pipe`) para procesar y mostrar correctamente las imágenes provenientes de la API.
+
+---
+
+## Diapositiva 5: Funcionalidades Principales (Pestaña 1: Inicio)
+
+*   **Propósito:** Ser la pantalla de bienvenida y descubrimiento.
+*   **Características:**
+    *   **Estrenos del Mes:** Un `slideshow` principal (`Slideshow-Backdrop`) muestra las películas más recientes, captando la atención del usuario.
+    *   **Películas Populares:** Un segundo `slideshow` (`Slideshow-Pares`) presenta una lista horizontal de las películas más populares del momento.
+    *   **Scroll Infinito:** A medida que el usuario baja, la lista de películas populares carga más contenido automáticamente, mejorando la experiencia de navegación.
+
+---
+
+## Diapositiva 6: Funcionalidades Principales (Pestaña 2: Buscar)
+
+*   **Propósito:** Permitir al usuario encontrar películas específicas.
+*   **Características:**
+    *   **Barra de Búsqueda:** Un campo de texto para que el usuario escriba el título de una película.
+    *   **Búsqueda en Tiempo Real:** La aplicación realiza la búsqueda mientras el usuario escribe (con un debounce para optimizar).
+    *   **Sugerencias de Búsqueda:** Se muestran ideas de películas populares para guiar al usuario.
+    *   **Vista de Detalles:** Al seleccionar una película de los resultados, se abre un modal con toda su información (sinopsis, reparto, etc.).
+
+---
+
+## Diapositiva 7: Funcionalidades Principales (Pestaña 3: Favoritos)
+
+*   **Propósito:** Ser la colección personal de películas del usuario.
+*   **Características:**
+    *   **Persistencia de Datos:** Las películas marcadas como favoritas se guardan localmente en el dispositivo.
+    *   **Agrupación por Género:** La vista organiza automáticamente las películas favoritas en categorías según su género (Acción, Comedia, Drama, etc.).
+    *   **Acceso Rápido:** El usuario puede consultar fácilmente las películas que más le han gustado.
+    *   **Sincronización Automática:** La lista se actualiza cada vez que el usuario visita la pestaña.
+
+---
+
+## Diapositiva 8: Próximos Pasos y Mejoras Futuras
+
+*   **Autenticación de Usuarios:** Implementar un sistema de login para sincronizar favoritos entre dispositivos.
+*   **Calificaciones y Reseñas:** Permitir a los usuarios calificar películas y escribir sus propias reseñas.
+*   **Notificaciones Push:** Enviar alertas sobre próximos estrenos de películas guardadas en favoritos.
+*   **Modo Offline:** Mejorar el acceso a los detalles de las películas favoritas incluso sin conexión a internet.
+*   **Traducciones:** Añadir soporte para más idiomas en la interfaz y en los datos de la API.
+
+---
+
+## Diapositiva 9: Conclusión
+
+*   **Resumen:** La aplicación "Películas" es un ejemplo funcional y bien estructurado de una aplicación móvil moderna construida con Ionic y Angular.
+*   **Logros:** Se cumplió el objetivo de crear una plataforma intuitiva para la exploración de películas, con características clave y una base de código mantenible.
+*   **Agradecimientos.**
+
+---
+
+## Diapositiva 10: ¿Preguntas?
+
+*   **Espacio para preguntas y respuestas.**
+*   **(Opcional) Demo en vivo de la aplicación.**
+
